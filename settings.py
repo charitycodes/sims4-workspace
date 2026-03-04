@@ -19,6 +19,9 @@ from pathlib import Path
 # Settings you can change
 # ####################################################
 
+# py -3.7 .\decompile.py --game
+# py -3.7 .\compile.py s4-access-control
+
 # Your Name
 creator_name = 'CharityCodes'
 
@@ -49,8 +52,11 @@ pycharm_pro_folder = os.path.join('C:', os.sep, 'Program Files', 'JetBrains', 'P
 # Settings that you can but generally won't change
 # ####################################################
 
+# The name of this project, by default it's setup to use the folder name containing the project
+project_name = "s4-access-control"
+
 # Folder within this project that contains your python/script files
-src_subpath = "src"
+src_subpath = os.path.join("..", project_name, "src")
 
 # Folder within this project that your mods will be built to
 build_subpath = "build"
@@ -61,9 +67,6 @@ assets_subpath = "assets"
 # Subpath inside the projects folder to place decompiled python files
 projects_python_subpath = "python"
 projects_tuning_subpath = "tuning"
-
-# The name of this project, by default it's setup to use the folder name containing the project
-project_name = Path(__file__).parent.stem
 
 # Dev Mode
 devmode_cmd_mod_src = "util/devmode_cmd.py"
